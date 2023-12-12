@@ -3,6 +3,7 @@
 # Check if script is not running as root
 if [[ $EUID > 0 ]]; then
   echo "Please run as root"
+  sleep 3
   exit
 else
   # Disable SteamOS readonly mode
@@ -35,4 +36,6 @@ else
 
   # Enable SteamOS readonly mode
   steamos-readonly enable
+
+  sleep 3
 fi
